@@ -1,0 +1,612 @@
+# depslib dependency file v1.0
+1379534737 source:c:\users\justin\documents\codeblocks\slimegame\main.cpp
+	"Game/SlimeController.h"
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics.hpp
+	<SFML/Window.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Shader.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/Graphics/CircleShape.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/ConvexShape.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/View.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window.hpp
+	<SFML/System.hpp>
+	<SFML/Window/Context.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowStyle.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/Lock.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/ThreadLocal.hpp>
+	<SFML/System/ThreadLocalPtr.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1374390132 c:\users\justin\documents\sfml-2.1\include\sfml\config.hpp
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\time.hpp
+	<SFML/System/Export.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\err.hpp
+	<SFML/System/Export.hpp>
+	<ostream>
+
+1368099372 c:\users\justin\documents\sfml-2.1\include\sfml\system\inputstream.hpp
+	<SFML/Config.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\lock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\noncopyable.hpp
+	<SFML/System/Export.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\mutex.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\sleep.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<locale>
+	<string>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\thread.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdlib>
+	<SFML/System/Thread.inl>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\thread.inl
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\threadlocal.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdlib>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\threadlocalptr.hpp
+	<SFML/System/ThreadLocal.hpp>
+	<SFML/System/ThreadLocalPtr.inl>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\threadlocalptr.inl
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\utf.hpp
+	<SFML/Config.hpp>
+	<algorithm>
+	<locale>
+	<string>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1372053422 c:\users\justin\documents\sfml-2.1\include\sfml\system\utf.inl
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\vector2.hpp
+	<SFML/System/Vector2.inl>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\vector2.inl
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\vector3.hpp
+	<SFML/System/Vector3.inl>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\system\vector3.inl
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\context.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\export.hpp
+	<SFML/Config.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\glresource.hpp
+	<SFML/Window/Export.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\contextsettings.hpp
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\event.hpp
+	<SFML/Config.hpp>
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\joystick.hpp
+	<SFML/Window/Export.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\keyboard.hpp
+	<SFML/Window/Export.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\mouse.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\videomode.hpp
+	<SFML/Window/Export.hpp>
+	<vector>
+
+1371061192 c:\users\justin\documents\sfml-2.1\include\sfml\window\window.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/Window/WindowStyle.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/String.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\windowhandle.hpp
+	<SFML/Config.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\window\windowstyle.hpp
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\blendmode.hpp
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\color.hpp
+	<SFML/Graphics/Export.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\export.hpp
+	<SFML/Config.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\font.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/String.hpp>
+	<map>
+	<string>
+	<vector>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\glyph.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\rect.hpp
+	<SFML/System/Vector2.hpp>
+	<algorithm>
+	<SFML/Graphics/Rect.inl>
+
+1368305601 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\rect.inl
+
+1367997280 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\texture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Window/GlResource.hpp>
+
+1368172116 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\image.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<string>
+	<vector>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\renderstates.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/Transform.hpp>
+
+1367997280 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\transform.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\rendertexture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\rendertarget.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1367997281 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\view.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/System/Vector2.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\primitivetype.hpp
+
+1367997280 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\vertex.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/System/Vector2.hpp>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\renderwindow.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Window/Window.hpp>
+	<string>
+
+1371547273 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\shader.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+	<map>
+	<string>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\shape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/Vector2.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\drawable.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+
+1368255064 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\transformable.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Transform.hpp>
+
+1367997280 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\vertexarray.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<vector>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\circleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\rectangleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\convexshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<vector>
+
+1367997279 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\sprite.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1367997280 c:\users\justin\documents\sfml-2.1\include\sfml\graphics\text.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/String.hpp>
+	<string>
+	<vector>
+
+1379442222 source:c:\users\justin\documents\codeblocks\slimegame\gameobject.cpp
+	"GameObject.h"
+
+1379265816 c:\users\justin\documents\codeblocks\slimegame\gameobject.h
+	<SFML/Graphics.hpp>
+	"Body.h"
+
+1379264614 c:\users\justin\documents\codeblocks\slimegame\player.h
+	"GameObject.h"
+
+1379265045 source:c:\users\justin\documents\codeblocks\slimegame\player.cpp
+	"Player.h"
+
+1379266549 source:c:\users\justin\documents\codeblocks\slimegame\body.cpp
+	"Body.h"
+
+1379266424 c:\users\justin\documents\codeblocks\slimegame\body.h
+	<SFML/Graphics.hpp>
+
+1379262849 c:\users\justin\documents\codeblocks\slimegame\body.cpp
+	"Body.h"
+
+1379363436 source:c:\users\justin\documents\codeblocks\slimegame\scene.cpp
+	"Scene.h"
+
+1379359157 c:\users\justin\documents\codeblocks\slimegame\scene.h
+	<SFML/Graphics.hpp>
+	<vector>
+	"Manifold.h"
+	"Constants.h"
+
+1379358263 source:c:\users\justin\documents\codeblocks\slimegame\manifold.cpp
+	"Manifold.h"
+
+1379357867 c:\users\justin\documents\codeblocks\slimegame\manifold.h
+	<algorithm>
+	"Body.h"
+	"PhysicsMath.h"
+
+1379283159 c:\users\justin\documents\codeblocks\slimegame\physicsmath.h
+	<SFML/Graphics.hpp>
+	<math.h>
+
+1379283673 source:c:\users\justin\documents\codeblocks\slimegame\physicsmath.cpp
+	"PhysicsMath.h"
+	<math.h>
+	<cmath>
+
+1379358165 source:c:\users\justin\documents\codeblocks\slimegame\collision.cpp
+	"Collision.h"
+
+1379358077 c:\users\justin\documents\codeblocks\slimegame\collision.h
+	"Manifold.h"
+
+1379363870 source:c:\users\justin\documents\codeblocks\slimegame\constants.cpp
+	"Constants.h"
+
+1379364086 c:\users\justin\documents\codeblocks\slimegame\constants.h
+
+1379528607 source:c:\users\justin\documents\codeblocks\slimegame\engine\gamebase.cpp
+	"GameBase.h"
+	"Defines.h"
+	"debug/DebugLog.h"
+	"input/Input.h"
+	"video/Video.h"
+	"helpers/Timer.h"
+
+1379528483 c:\users\justin\documents\codeblocks\slimegame\engine\gamebase.h
+	"helpers/Event.h"
+	"helpers/Timer.h"
+	"input/Input.h"
+	"video/Video.h"
+	"debug/DebugLog.h"
+
+1379450894 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\timer.h
+	<memory>
+
+1379449623 c:\users\justin\documents\codeblocks\slimegame\engine\video\video.h
+	<SFML/Graphics.hpp>
+	<memory>
+
+1379450906 source:c:\users\justin\documents\codeblocks\slimegame\engine\helpers\timer.cpp
+	"Timer.h"
+	<SFML/system.hpp>
+
+1379451015 source:c:\users\justin\documents\codeblocks\slimegame\engine\video\video.cpp
+	"Video.h"
+	"../Defines.h"
+
+1379450975 c:\users\justin\documents\codeblocks\slimegame\engine\defines.h
+
+1379540243 source:c:\users\justin\documents\codeblocks\slimegame\game\slimecontroller.cpp
+	"SlimeController.h"
+	<stdlib.h>
+
+1379528319 source:c:\users\justin\documents\codeblocks\slimegame\engine\debug\debuglog.cpp
+	"DebugLog.h"
+	"../Defines.h"
+	<iostream>
+	<fstream>
+	<stdarg.h>
+
+1379528225 c:\users\justin\documents\codeblocks\slimegame\engine\debug\debuglog.h
+	<fstream>
+	<vector>
+	<string>
+	<memory>
+
+1379527566 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\event.h
+	"EventHandler.h"
+	<cstddef>
+
+1379527474 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\eventhandler.h
+	<map>
+	<vector>
+
+1379528033 c:\users\justin\documents\codeblocks\slimegame\engine\input\input.h
+	<SFML/Graphics.hpp>
+	"InputData.h"
+	"../helpers/Event.h"
+
+1379527975 c:\users\justin\documents\codeblocks\slimegame\engine\input\inputdata.h
+	<memory>
+
+1379528079 source:c:\users\justin\documents\codeblocks\slimegame\engine\input\input.cpp
+	"Input.h"
+	<string.h>
+	"../Defines.h"
+	"../video/Video.h"
+
+1379529101 source:c:\users\justin\documents\codeblocks\slimegame\engine\video\sprite.cpp
+	"Sprite.h"
+	"../debug/DebugLog.h"
+	"../Defines.h"
+
+1379529131 c:\users\justin\documents\codeblocks\slimegame\engine\video\sprite.h
+	<SFML/Graphics.hpp>
+
+1379529285 source:c:\users\justin\documents\codeblocks\slimegame\engine\video\tilemap.cpp
+	"TileMap.h"
+
+1379529199 c:\users\justin\documents\codeblocks\slimegame\engine\video\tilemap.h
+	<SFML\Graphics.hpp>
+
+1379529693 source:c:\users\justin\documents\codeblocks\slimegame\engine\helpers\taskmanager.cpp
+	"TaskManager.h"
+	<algorithm>
+	<cassert>
+
+1379529515 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\taskmanager.h
+	<memory>
+	<list>
+	"TaskInterface.h"
+
+1379529442 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\taskinterface.h
+
+1379529746 source:c:\users\justin\documents\codeblocks\slimegame\engine\helpers\motion.cpp
+	"Motion.h"
+	<math.h>
+
+1379529783 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\motion.h
+
+1379529899 source:c:\users\justin\documents\codeblocks\slimegame\engine\helpers\interpolator.cpp
+	"Interpolator.h"
+	"Util.h"
+
+1379529938 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\interpolator.h
+
+1379529382 c:\users\justin\documents\codeblocks\slimegame\engine\helpers\util.h
+	<algorithm>
+	<SFML/System.hpp>
+
+1379534412 source:c:\users\justin\documents\codeblocks\slimegame\game\pacman\pacmancontroller.cpp
+	"pacmanController.h"
+	<stdlib.h>
+
+1379530582 c:\users\justin\documents\codeblocks\slimegame\game\pacman\pacmancontroller.h
+	"../../Engine/Includes.h"
+	<SFML/Audio.hpp>
+
+1379529949 c:\users\justin\documents\codeblocks\slimegame\engine\includes.h
+	"Defines.h"
+	"GameBase.h"
+	"input/Input.h"
+	"video/Video.h"
+	"video/Sprite.h"
+	"video/TileMap.h"
+	"debug/DebugLog.h"
+	"helpers/Timer.h"
+	"helpers/Event.h"
+	"helpers/Motion.h"
+	"helpers/Interpolator.h"
+	"helpers/TaskManager.h"
+	"helpers/Util.h"
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1367997278 c:\users\justin\documents\sfml-2.1\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Thread.hpp>
+	<vector>
+
+1379534637 c:\users\justin\documents\codeblocks\slimegame\game\slimecontroller.h
+	"../Engine/Includes.h"
+	<SFML/Audio.hpp>
+
+1379542211 source:c:\users\justin\documents\codeblocks\slimegame\game\level\level.cpp
+	"Level.h"
+
+1379540536 source:c:\users\justin\documents\codeblocks\slimegame\game\level\levelgenerator.cpp
+
+1379541902 source:c:\users\justin\documents\codeblocks\slimegame\game\level\levelmanager.cpp
+	"LevelManager.h"
+
+1379542216 c:\users\justin\documents\codeblocks\slimegame\game\level\levelmanager.h
+	"Level.h"
+
+1379541982 c:\users\justin\documents\codeblocks\slimegame\game\level\level.h
+
+1379540831 source:c:\users\justin\documents\codeblocks\slimegame\game\level\room.cpp
+
