@@ -1,12 +1,17 @@
 #ifndef CONSTANTS_H_INCLUDED
 #define CONSTANTS_H_INCLUDED
 
+#include <cstdlib> //to use random numbers
+#include <ctime>   //to use random numbers
+
 class Constants
 {
     public:
-        static const float tileSize = 50.0f;
-        static const float roomFriction = 0.7f;
-        static const float pickupFriction = 0.001f;
+        const int tileSize = 50;
+        const float roomFriction = 0.7f;
+        const float pickupFriction = 0.001f;
+
+        static int random(int max, int min); //Pass in range
 };
 
 #endif // CONSTANTS_H_INCLUDED

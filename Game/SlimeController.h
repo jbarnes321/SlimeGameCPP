@@ -2,6 +2,7 @@
 #define SLIMECONTROLLER_H_INCLUDED
 
 #include "../Engine/Includes.h"
+#include "level/LevelManager.h"
 #include <SFML/Audio.hpp>
 
 class SlimeGame : public GameBase
@@ -10,6 +11,8 @@ class SlimeGame : public GameBase
 		EventManager1<void, int> m_eventHandler;
 		SlimeGame();
 		~SlimeGame() {};
+
+		LevelManager levelManager;
 
 	private:
 		void onTick();

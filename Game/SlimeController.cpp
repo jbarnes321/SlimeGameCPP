@@ -5,6 +5,8 @@ SlimeGame::SlimeGame()
 {
     m_screenSize = sf::Vector2i(1000, 600);
     m_video->changeTitle("Revenge of the Slime");
+
+    LevelManager();
 }
 
 

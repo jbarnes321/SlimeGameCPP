@@ -10,26 +10,15 @@ class LevelManager
         LevelManager();
         ~LevelManager() {};
 
-        enum LevelType
-        {
-            hub = 0,
-            start,
-            fire,
-            ice,
-            poison,
-            ghost,
-            electric,
-            earth,
-            necro,
-            NONE
-        };
 
         void onTick();
         void onRender();
-        void createNewLevel(LevelType levelType);
+        void createNewLevel(Level::LevelType levelType);
 
         Level currentLevel;
-        Level hubLevel;
+        Level levelHub;
+
+        Level::LevelType currentLevelType;
 
         int levelDifficulty;
 
