@@ -1,11 +1,9 @@
 #ifndef LEVEL_H_INCLUDED
 #define LEVEL_H_INCLUDED
 
-#include <SFML/Graphics.hpp>
 #include "Room.h"
 
-
-class Level
+class Level : public GameBase
 {
     public:
 
@@ -30,6 +28,7 @@ class Level
 
         void initialize();
         void onTick();
+        void onEvent(const int eventType, const int param1, const int param2);
         void onRender();
         void drawMiniMap();
         void getMiniMapSprite();
@@ -41,8 +40,10 @@ class Level
         int levelDifficulty;
 
 
-
     private:
+
+        sf::Texture miniMapBackgroundTexture;
+        sf::Sprite miniMapBackgroundSprite;
 
 };
 

@@ -12,27 +12,16 @@ class LevelGenerator
         LevelGenerator(Level &level, int difficulty);
         ~LevelGenerator() {};
 
-        // Enum specifying the room type
-        enum RoomType
-        {
-            HUB = 0,
-            FIRST,
-            NORMAL,
-            MINIBOSS,
-            BOSS,
-            TREASURE,
-            SHOP,
-            LASTROOM
-        };
+        bool generateMap();
 
-        void generateMap();
+        std::vector<Room> specialRooms;
 
     private:
 
         void pickStartRoom();
         int budget();
-        void getSpecials();
-        void addRoom(sf::Vector2i, RoomType roomType);
+        int getSpecials();
+        void addRoom(sf::Vector2i, Room::RoomType roomType);
         int checkDirection(int direction, int prev, int length);
         sf::Vector2i getDifferenceVector(int direction);
         bool outOfBounds(sf::Vector2i);
@@ -45,6 +34,10 @@ class LevelGenerator
 
         Level *level;               //pointer to the current level being built
         int levelDifficulty;
+
+        Room *startRoom;
+
+        sf::Vector2i position;
 
 
 };

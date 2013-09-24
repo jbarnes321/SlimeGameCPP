@@ -22,14 +22,19 @@ void LevelManager::onTick()
 }
 
 
+void LevelManager::onEvent(const int eventType, const int param1, const int param2)
+{
+}
+
+
 void LevelManager::onRender()
 {
+
+
     //draw the current level
     currentLevel.onRender();
 
-    //draw the minimap, unless the current level is the hub
-    if (currentLevelType != Level::hub)
-        currentLevel.drawMiniMap();
+    m_video->clear(sf::Color::Blue);
 }
 
 

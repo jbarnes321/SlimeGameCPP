@@ -7,9 +7,9 @@
 class Constants
 {
     public:
-        const int tileSize = 50;
-        const float roomFriction = 0.7f;
-        const float pickupFriction = 0.001f;
+        static const int tileSize;
+        static const float roomFriction;
+        static const float pickupFriction;
 
         static int random(int max, int min); //Pass in range
 };

@@ -17,7 +17,8 @@ void SlimeGame::onTick()
 
 void SlimeGame::onRender()
 {
-    m_video->clear(sf::Color::Black);
+
+    levelManager.onRender();
 
     m_video->swapBuffers();
 }

@@ -3,7 +3,7 @@
 
 #include "Level.h"
 
-class LevelManager
+class LevelManager : public GameBase
 {
     public:
 
@@ -13,6 +13,7 @@ class LevelManager
 
         void onTick();
         void onRender();
+        void onEvent(const int eventType, const int param1, const int param2);
         void createNewLevel(Level::LevelType levelType);
 
         Level currentLevel;
