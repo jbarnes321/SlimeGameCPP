@@ -41,6 +41,12 @@ void Room::onTick()
 
 void Room::onRender(sf::RenderWindow &window)
 {
+	for(std::vector<int>::size_type i = 0; i != floorTiles.size(); i++)
+	{
+		//sf::Texture
+    /* std::cout << someVector[i]; ... */
+	}
+
 	drawBorders(window);
 }
 
