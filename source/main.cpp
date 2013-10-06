@@ -4,6 +4,7 @@
 
 int main()
 {
+	srand(time(0));
     sf::RenderWindow window(sf::VideoMode(ScreenWidth, ScreenHeight), "Revenge of the Slime");
 
 	sf::Clock clock;
