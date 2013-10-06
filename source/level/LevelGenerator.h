@@ -3,18 +3,28 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+
+
+#include "../Constants.h"
+#include "Room.h"
 #include "Level.h"
+
 
 class LevelGenerator
 {
     public:
 
-        LevelGenerator(Level &level, int difficulty);
+		LevelGenerator();
+        LevelGenerator(Level::LevelType type, int difficulty, Room (*lvlRPtr)[10]);
         ~LevelGenerator() {};
 
         bool generateMap();
 
-        std::vector<Room> specialRooms;
+		sf::Vector2i startPos;
+		//Room startRoom;
+		//Room *levelRooms[8][10];               //the current level being built
+		int levelDifficulty;
+		Level::LevelType levelType;
 
     private:
 
@@ -27,15 +37,15 @@ class LevelGenerator
         bool outOfBounds(sf::Vector2i);
         std::vector<sf::Vector2i> getLonelies();
         int getAdjacentRoomCount(sf::Vector2i position);
+		std::string LevelTypeToString(Level::LevelType type);
 
         int totalRoomCount;         // the total number of room layouts in maps.txt
         std::string mapFileDir;     //path directory to map.txt
-        std::string specialRoomDir;//path to special room text files
+        std::string specialRoomDir;	//path to special room text files
 
-        Level *level;               //pointer to the current level being built
-        int levelDifficulty;
-
-        Room *startRoom;
+		Room (*lvlRoomPtr)[10];
+        
+               
 
         sf::Vector2i position;
 

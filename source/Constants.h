@@ -11,7 +11,8 @@ class Constants
         static const float roomFriction;
         static const float pickupFriction;
 
-        static int random(int max, int min); //Pass in range
+        static int random( int min, int max); //Pass in range		
+
 };
 
 #endif // CONSTANTS_H_INCLUDED
