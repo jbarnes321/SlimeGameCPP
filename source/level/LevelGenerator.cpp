@@ -223,27 +223,34 @@ int LevelGenerator::getAdjacentRoomCount(sf::Vector2i position)
     if (outOfBounds(sf::Vector2i(col, row - 1)) == false && lvlRoomPtr[row - 1][col].roomID != -1)
     {
         if (lvlRoomPtr[row - 1][col].roomType != Room::NORMAL)
-            return 4;
+		{
+			return 4;
+		}
         count++;
-
     }
 
     if (outOfBounds(sf::Vector2i(col + 1, row)) == false && lvlRoomPtr[row][col + 1].roomID != -1)
     {
         if (lvlRoomPtr[row][col + 1].roomType != Room::NORMAL)
-            return 4;
+		{
+			return 4;
+		}
         count++;
     }
 
     if (outOfBounds(sf::Vector2i(col - 1, row)) == false && lvlRoomPtr[row][col - 1].roomID != -1)
     {
         if (lvlRoomPtr[row][col - 1].roomType != Room::NORMAL)
-            return 4;
+		{
+			return 4;
+		}
         count++;
     }
 
     if (count == 0)
+	{
         return 4;
+	}
 
     return count;
 }
@@ -283,7 +290,7 @@ int LevelGenerator::budget()
     switch (levelDifficulty)
     {
         case 0:
-            value = 25;
+            value = 15;
             break;
         case 1:
             value = 9;
