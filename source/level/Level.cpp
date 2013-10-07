@@ -48,7 +48,7 @@ void Level::LoadContent()
 
 void Level::Update()
 {
-    currentRoom->onTick();
+    currentRoom->Update();
 }
 
 
@@ -58,7 +58,7 @@ void Level::Draw(sf::RenderWindow &window)
     if (levelType != Hub)
         drawMiniMap(window);
 
-    currentRoom->onRender(window);
+    currentRoom->Draw(window);
 	
 }
 

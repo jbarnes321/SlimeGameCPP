@@ -6,7 +6,6 @@ const float Constants::pickupFriction = 0.001f;
 
 int Constants::random(int min, int max) //Pass in range
 {
-    srand(time(NULL));  //srand() seeds rand.
     int r = rand() % (max - min) + min;
     return r;
 }

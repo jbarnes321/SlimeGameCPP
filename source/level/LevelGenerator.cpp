@@ -9,6 +9,8 @@ LevelGenerator::LevelGenerator(Level::LevelType type, int difficulty, Room (*lvl
     levelType = type;
 	levelDifficulty = difficulty;
 	lvlRoomPtr = lvlRPtr;
+	specialRoomDir = "maps/specialRooms/maps.txt";
+	mapFileDir = "maps/difficulty" + std::to_string(static_cast<long long>(levelDifficulty)) + "/" + LevelTypeToString(levelType) + "/maps.txt"; 
 }
 
 

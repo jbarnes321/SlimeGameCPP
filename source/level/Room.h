@@ -2,7 +2,9 @@
 #define ROOM_H_INCLUDED
 
 #include <string>
+#include <fstream>
 #include <SFML/Graphics.hpp>
+#include "../Constants.h"
 
 class Room
 {
@@ -27,8 +29,8 @@ class Room
         ~Room() {};
 
 		void LoadContent();
-        void onTick();
-        void onRender(sf::RenderWindow &window);
+        void Update();
+        void Draw(sf::RenderWindow &window);
 
 
         RoomType roomType;
@@ -40,13 +42,15 @@ class Room
 
 		sf::Texture ec600Texture, ec800Texture;
 		sf::Sprite edgeClosed600Right, edgeClosed600Left, edgeClosed800Top, edgeClosed800Bottom;
+		sf::Texture tileSheetTexture;
 
 		std::string levelDir;
+		std::string mapName;
 
 		struct Tile
 		{
 			int tileID;
-			sf::Vector2i position;
+			sf::Vector2f position;
 			sf::IntRect tileImage;
 			float scale;
 		};
