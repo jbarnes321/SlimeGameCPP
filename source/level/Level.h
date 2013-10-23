@@ -5,6 +5,8 @@
 #include <SFML/Graphics.hpp>
 
 #include "Room.h"
+#include "../utilities/physics/Scene.h"
+#include "../gameObjects/Player.h"
 
 class Level
 {
@@ -26,12 +28,13 @@ class Level
 
 
         Level();
-        Level(LevelType lType, int difficulty);
+        Level(LevelType lType, int difficulty, Scene *scene);
         ~Level() {};
 
         void Initialize();
 		void LoadContent();
-        void Update();
+		void UnloadContent();
+        void Update(Player &player);
         void Draw(sf::RenderWindow &window);
 
         void drawMiniMap(sf::RenderWindow &window);
@@ -48,6 +51,10 @@ class Level
 
     private:
 
+		void populateSceneBodies();
+
+		Scene *scene;
+
 		//the background image of the minimap
 		sf::Texture mmbTexture;
 		sf::Sprite miniMapBackgroundSprite;
@@ -55,6 +62,9 @@ class Level
 		//the individual room images that are places on the minimap
 		sf::Texture mmrTexture;        
 		sf::Sprite miniMapRoomSprite;
+
+		sf::Texture doorTop, doorBottom, doorLeft, doorRight;
+		sf::Texture doorTextures[4];
 
 		std::vector<Room*> oldRooms;
 		std::vector<Room*> newRooms;

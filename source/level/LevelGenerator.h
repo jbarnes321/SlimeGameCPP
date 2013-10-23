@@ -21,8 +21,6 @@ class LevelGenerator
         bool generateMap();
 
 		sf::Vector2i startPos;
-		//Room startRoom;
-		//Room *levelRooms[8][10];               //the current level being built
 		int levelDifficulty;
 		Level::LevelType levelType;
 
@@ -44,7 +42,6 @@ class LevelGenerator
         std::string specialRoomDir;	//path to special room text files
 
 		Room (*lvlRoomPtr)[10];
-        
                
 
         sf::Vector2i position;

@@ -34,7 +34,7 @@ bool LevelGenerator::generateMap()
     {
         for (int j = 0; j < 10; j++)
         {
-			lvlRoomPtr[i][j] = Room(i, j, Room::NONE, LevelTypeToString(levelType), -1, "none");
+			lvlRoomPtr[i][j] = Room(i, j, Room::NONE, LevelTypeToString(levelType), -1, "none", lvlRoomPtr);
         }
     }
 
@@ -159,19 +159,19 @@ void LevelGenerator::addRoom(sf::Vector2i position, Room::RoomType roomType)
     int roomID = Constants::random(1, totalRoomCount + 1);
 
     if(roomType == Room::BOSS)
-		lvlRoomPtr[row][col] = Room(row, col, Room::BOSS, specialRoomDir, 0, LevelTypeToString(levelType));
+		lvlRoomPtr[row][col] = Room(row, col, Room::BOSS, specialRoomDir, 0, LevelTypeToString(levelType), lvlRoomPtr);
 
     else if (roomType == Room::SHOP)
-        lvlRoomPtr[row][col] = Room(row, col, Room::SHOP, specialRoomDir, 1, LevelTypeToString(levelType));
+        lvlRoomPtr[row][col] = Room(row, col, Room::SHOP, specialRoomDir, 1, LevelTypeToString(levelType), lvlRoomPtr);
 
     else if(roomType == Room::TREASURE)
-        lvlRoomPtr[row][col] = Room(row, col, Room::TREASURE, specialRoomDir, 0, LevelTypeToString(levelType));
+        lvlRoomPtr[row][col] = Room(row, col, Room::TREASURE, specialRoomDir, 0, LevelTypeToString(levelType), lvlRoomPtr);
 
     else if (roomType == Room::LASTROOM)
-        lvlRoomPtr[row][col] = Room(row, col, Room::LASTROOM,specialRoomDir, 0, LevelTypeToString(levelType));
+        lvlRoomPtr[row][col] = Room(row, col, Room::LASTROOM,specialRoomDir, 0, LevelTypeToString(levelType), lvlRoomPtr);
 
     else
-        lvlRoomPtr[row][col] = Room(row, col, Room::NORMAL,  mapFileDir, roomID, LevelTypeToString(levelType));
+        lvlRoomPtr[row][col] = Room(row, col, Room::NORMAL,  mapFileDir, roomID, LevelTypeToString(levelType), lvlRoomPtr);
 }
 
 int LevelGenerator::getSpecials()
@@ -223,34 +223,27 @@ int LevelGenerator::getAdjacentRoomCount(sf::Vector2i position)
     if (outOfBounds(sf::Vector2i(col, row - 1)) == false && lvlRoomPtr[row - 1][col].roomID != -1)
     {
         if (lvlRoomPtr[row - 1][col].roomType != Room::NORMAL)
-		{
-			return 4;
-		}
+            return 4;
         count++;
+
     }
 
     if (outOfBounds(sf::Vector2i(col + 1, row)) == false && lvlRoomPtr[row][col + 1].roomID != -1)
     {
         if (lvlRoomPtr[row][col + 1].roomType != Room::NORMAL)
-		{
-			return 4;
-		}
+            return 4;
         count++;
     }
 
     if (outOfBounds(sf::Vector2i(col - 1, row)) == false && lvlRoomPtr[row][col - 1].roomID != -1)
     {
         if (lvlRoomPtr[row][col - 1].roomType != Room::NORMAL)
-		{
-			return 4;
-		}
+            return 4;
         count++;
     }
 
     if (count == 0)
-	{
         return 4;
-	}
 
     return count;
 }
@@ -268,11 +261,11 @@ void LevelGenerator::pickStartRoom()
 
     // Creates the HUB level.
     if(levelType == Level::Hub)
-		lvlRoomPtr[row][col] = Room(row, col, Room::HUB, mapFileDir, 0, LevelTypeToString(levelType));
+		lvlRoomPtr[row][col] = Room(row, col, Room::HUB, mapFileDir, 0, LevelTypeToString(levelType), lvlRoomPtr);
 
     // Creats the initial room, which is empty.
     else
-        lvlRoomPtr[row][col] = Room(row, col, Room::FIRST, mapFileDir, 0, LevelTypeToString(levelType));
+        lvlRoomPtr[row][col] = Room(row, col, Room::FIRST, mapFileDir, 0, LevelTypeToString(levelType), lvlRoomPtr);
 
 	startPos = sf::Vector2i(col, row);
     position = sf::Vector2i(col, row);
@@ -290,7 +283,7 @@ int LevelGenerator::budget()
     switch (levelDifficulty)
     {
         case 0:
-            value = 15;
+            value = 25;
             break;
         case 1:
             value = 9;

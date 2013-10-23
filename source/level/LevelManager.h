@@ -7,6 +7,8 @@
 
 #include "Level.h"
 #include "LevelGenerator.h"
+#include "../gameObjects/Player.h"
+
 
 class LevelManager
 {
@@ -14,14 +16,16 @@ class LevelManager
         ~LevelManager();
 		static LevelManager &getInstance();
 
-		void Initialize();
+		void Initialize(sf::Clock sfClock, Scene *scene);
 		void LoadContent();
-        void Update(sf::Time elapsedTime);
+        void Update(sf::Time elapsedTime, sf::Event event);
         void Draw(sf::RenderWindow &window);
 
         void createNewLevel(Level::LevelType levelType);
-        
 
+		sf::Clock clock;
+		Player player;
+        
     private:
 		LevelManager();
 		LevelManager(LevelManager const&);
@@ -35,6 +39,8 @@ class LevelManager
         Level::LevelType currentLevelType;
 
         int levelDifficulty;
+
+		Scene *scene;
 };
 
 

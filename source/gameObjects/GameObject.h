@@ -4,24 +4,34 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "../Constants.h"
+#include "../utilities/AnimationPlayer.h"
+#include "../utilities/physics/Body.h"
 
 class GameObject
 {
 	public:
-		GameObject(sf::Vector2f position);
-		~GameObject();
+		GameObject();
+		GameObject(sf::Vector2f pos);
+		GameObject(sf::Vector2f position, sf::Clock clock);
+		~GameObject() {};
 	
 		virtual void LoadContent();
 		virtual void Update();
 		virtual void Draw(sf::RenderWindow &window);
 		void DrawShadow(sf::RenderWindow &window);
 
-	private:
+		Body body;
+		sf::Vector2f position;
+		sf::Vector2f origin;
+
+	protected:
+		
+		sf::Clock clock;		
 		std::string assetDir;
 
-		int flashTime;
+	private:		
 
-		sf::Vector2f position;
+		int flashTime;	
 
 		sf::Color color;
 

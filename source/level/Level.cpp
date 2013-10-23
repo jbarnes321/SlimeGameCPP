@@ -1,8 +1,12 @@
 #include "Level.h"
 
-Level::Level() {}
+Level::Level() :
+scene(&Scene(sf::Vector2f(0, 0)))
+{
+}
 
-Level::Level(LevelType lType, int difficulty)
+Level::Level(LevelType lType, int difficulty, Scene *roomScene) :
+	scene(roomScene)
 {
     levelType = lType;
     levelDifficulty = difficulty;
@@ -27,6 +31,29 @@ void Level::LoadContent()
 		return;
 	}
 
+	//door textures
+	if(!doorTop.loadFromFile("assets/door/" + Level::LevelTypeToString(levelType) + "/doorTopSheet.png"))
+	{
+		return;
+	}
+	if(!doorBottom.loadFromFile("assets/door/" + Level::LevelTypeToString(levelType) + "/doorBottomSheet.png"))
+	{
+		return;
+	}
+	if(!doorLeft.loadFromFile("assets/door/" + Level::LevelTypeToString(levelType) + "/doorLeftSheet.png"))
+	{
+		return;
+	}
+	if(!doorRight.loadFromFile("assets/door/" + Level::LevelTypeToString(levelType) + "/doorRightSheet.png"))
+	{
+		return;
+	}
+
+	doorTextures[0] = doorTop;
+	doorTextures[1] = doorBottom;
+	doorTextures[2] = doorLeft;
+	doorTextures[3] = doorRight;
+
 	miniMapBackgroundSprite.setTexture(mmbTexture);
 	miniMapBackgroundSprite.setPosition(800, 480);
 
@@ -39,16 +66,70 @@ void Level::LoadContent()
 			if (levelRooms[i][j].roomID != -1)
 			{
 				levelRooms[i][j].LoadContent();
+				levelRooms[i][j].createDoors(Level::LevelTypeToString(levelType), doorTextures);
 			}
 		}
 	}
 
+	populateSceneBodies();
+
+}
+
+void Level::UnloadContent()
+{
 }
 
 
-void Level::Update()
+void Level::Update(Player &player)
 {
     currentRoom->Update();
+
+	//player is leave out of the north door
+	if (player.position.y <= 5 + 50)
+    {
+        //player.bullets.Clear();
+        //player.specialAttacks.Clear();
+        //currentRoom.bulletsInRoom.Clear();
+        //currentRoom.specialsAttInRoom.Clear();
+		currentRoom = &levelRooms[currentRoom->row - 1][currentRoom->col];
+        player.body.position = sf::Vector2f(400, 575);
+        populateSceneBodies();
+
+    }
+	//player is leaving out the south door
+    else if (player.position.y >= 600 - 5 + 50)
+    {                
+        //player.bullets.Clear();
+        //player.specialAttacks.Clear();
+        //currentRoom.bulletsInRoom.Clear();
+        //currentRoom.specialsAttInRoom.Clear();
+        currentRoom = &levelRooms[currentRoom->row + 1][currentRoom->col];
+        player.body.position = sf::Vector2f(400, 125);
+        populateSceneBodies();
+
+    }
+	//player is leaving out the west door
+    else if (player.position.x <= 5)
+    {
+        //player.bullets.Clear();
+        //player.specialAttacks.Clear();
+        //currentRoom.bulletsInRoom.Clear();
+        //currentRoom.specialsAttInRoom.Clear();
+        currentRoom = &levelRooms[currentRoom->row][currentRoom->col - 1];
+        player.body.position = sf::Vector2f(725, 350);
+        populateSceneBodies();
+    }
+	//player is leaving out the east door
+    else if (player.position.x >= 800 - 5)
+    {
+        //player.bullets.Clear();
+        //player.specialAttacks.Clear();
+        //currentRoom.bulletsInRoom.Clear();
+        //currentRoom.specialsAttInRoom.Clear();
+        currentRoom = &levelRooms[currentRoom->row][currentRoom->col + 1];
+        player.body.position = sf::Vector2f(75, 350);
+        populateSceneBodies();
+    }
 }
 
 
@@ -341,4 +422,48 @@ std::string Level::LevelTypeToString(Level::LevelType type)
 		default :
 			return "";
 	}
+}
+
+void Level::populateSceneBodies()
+{
+    //empty the list
+	scene->currentRoomBodies.clear();
+
+    //add the player's body
+    //scene->addBodyCurrent(player.body);
+
+
+	for(std::vector<int>::size_type i = 0; i != currentRoom->wallsInRoom.size(); i++)
+	{
+		scene->addBodyCurrent(&currentRoom->wallsInRoom[i].body);
+    }
+
+    for(std::vector<int>::size_type i = 0; i != currentRoom->doorsInRoom.size(); i++)
+	{
+		scene->addBodyCurrent(&currentRoom->doorsInRoom[i].body);
+    }
+
+	for(std::vector<int>::size_type i = 0; i != currentRoom->enemiesInRoom.size(); i++)
+	{
+		scene->addBodyCurrent(&currentRoom->enemiesInRoom[i].body);
+    }
+
+	/*
+    foreach (Pickup p in currentRoom.pickupsInRoom)
+    {
+        scene.addBodyCurrent(p.body);
+    }
+
+    foreach (Hazard h in currentRoom.hazardsInRoom)
+    {
+        scene.addBodyCurrent(h.body);
+    }
+
+    if (currentRoom.roomType == LevelGenerator.RoomType.SHOP)
+    {
+        foreach (ShopTube s in currentRoom.tubesInRoom)
+        {
+            scene.addBodyCurrent(s.button.body);
+        }
+    }*/
 }
